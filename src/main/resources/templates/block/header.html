@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<section class="header" th:fragment="header">
+<p class="logo english pb-5"><a th:href="@{/}">オーダー管理システム</a></p>
+<ul class="pc">
+	<li><a th:href="@{/manage/business}">業務メニュー</a><span class="pc">　｜</span></li>
+	<li><a th:href="@{/manage/menu/index}">メニュー管理</a><span class="pc">　｜</span></li>
+	<li><a th:href="@{/manage/seat}">テーブル管理</a><span class="pc">　｜</span></li>
+	<li><a th:href="@{/manage/earnings}">売り上げ集計</a><span class="pc">　｜</span></li>
+	<li><a th:href="@{/manage/logout}">ログアウト</a></li>
+</ul> 
+</section>
+</html>

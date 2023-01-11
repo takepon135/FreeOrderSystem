@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet"> -->
+<link rel="stylesheet" href="css/style.css">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>	
+
+<section class="header">
+<p class="logo english pb-5">オーダー管理システム</p>
+<ul class="pc">
+	<li><a href="./manage/business">業務メニュー</a><span class="pc">　｜</span></li>
+	<li><a href="./manage/menu/index">メニュー管理</a><span class="pc">　｜</span></li>
+	<li><a href="./manage/seat">テーブル管理</a><span class="pc">　｜</span></li>
+	<li><a href="./manage/earnings">売り上げ集計</a><span class="pc">　｜</span></li>
+	<li><a href="./manage/logout">ログアウト</a></li>
+</ul> 
+</section>
+
+<section class=contents>
+<div class=container>
+<h1>管理者メニュー</h1>
+
+
+
+<ol>
+	<li >
+		<dl>
+			<dt>
+				業務メニュー
+			</dt>
+			<dd>
+				業務を開始します。<br>
+				各テーブルのステータスを更新・注文の受付が可能です。
+			</dd>
+			<div class="btn btn11">
+				<a href="./manage/business">業務メニューページへ</a>
+			</div>
+		</dl>
+	</li>
+
+	<li >
+		<dl>
+			<dt>
+				メニュー管理
+			</dt>
+			<dd>
+				メニュー(商品)の追加・削除・更新ができます。<br><br><br>
+			</dd>
+			<div class="btn btn11">
+				<a href="./manage/menu/index">メニュー管理ページへ</a>
+			</div>
+		</dl>
+	</li>
+
+	<li >
+		<dl>
+			<dt>
+				テーブル管理
+			</dt>
+			<dd>
+				テーブル(席)の追加・削除・更新ができます。
+				テーブルに設置するQRコードも、こちらから取得ください。
+			</dd>
+			<div class="btn btn11">
+				<a href="./manage/seat">テーブル管理ページへ</a>
+			</div>
+		</dl>
+	</li>
+
+	<li >
+		<dl>
+			<dt>
+				売り上げ集計
+			</dt>
+			<dd>
+				月ごとの売り上げを確認できます。<br><br><br>
+			</dd>
+			<div class="btn btn11">
+				<a href="./manage/earnings">売り上げ集計ページへ</a>
+			</div>
+		</dl>
+	</li>
+</ol>
+
+
+</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

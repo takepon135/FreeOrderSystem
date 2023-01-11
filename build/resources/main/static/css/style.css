@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+
+h1{
+  color:#827348;
+  text-align: center;
+  padding:50px 0;
+  font-size: 28px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight:700;
+}
+
+body{
+	
+}
+.container{
+  width:900px;
+  margin:0 auto;
+  background-color:#fffafa;
+ height:100%;
+ padding:40px;
+}
+
+.container.pd-0{
+	padding:0px;
+}
+
+.one-screen{
+	height:95vh;
+}
+
+
+ol {
+    display: flex;
+     flex-wrap: wrap;
+     list-style-type: none;
+}
+
+ul > li  {
+  list-style-type: none;
+  
+  
+}
+ol{
+	padding-left: 0px;
+	margin-bottom:0px;
+}
+ ol li {
+    width: 400px;
+    position: relative;
+    background: #FFF;
+    margin: 0px 18px 50px 18px;
+    border-radius: 16px;
+    padding: 20px 20px 30px 20px;
+    box-shadow: 0px 16px 64px rgb(0 0 0 / 10%);
+}
+
+li{
+	display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+dt{
+	text-align: center;
+}
+
+dl{
+	position: relative;
+}
+/************サブタイトル<h3>のレイアウト***************/
+.container>h3{
+	margin-top: 40px;
+	margin-bottom: 20px;
+	font-size:22px;
+	font-weight: 600;
+	padding:10px 0px 10px 20px;
+	border-left: 10px solid #827348;
+	border-bottom: 3px solid #827348;
+	color:#333631;
+}
+
+
+/************1行ごとのコンテンツのレイアウト***************/
+.content2{
+	padding-bottom:20px;
+}
+
+/************管理者ページ_ボタンレイアウト***************/
+.btn{
+	display: flex;
+	justify-content: center;
+}
+.btn11 a {
+	background-color: #827348;	
+	line-height: 0rm;
+	width:300px;
+	color:#333;
+}
+.btn11 a::after {
+	content: '';
+	position: absolute;
+	bottom: 10px;
+	right: 33px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 12px 12px;
+	border-color: transparent transparent #fff transparent;
+}
+.btn11 a:hover {
+	background-color: #B99b00;
+	
+}
+.btn11 a:hover::after {
+	border-color: transparent transparent #f2f2f2 transparent;
+}
+/************各ページ_ボタンレイアウト***************/
+.btn2{
+	background-color: #827348;	
+	line-height: 0rm;
+	padding:5px 20px;
+	margin-left:15px;
+	color:#fff;
+	border-radius: 40px;
+	border-style: solid;		
+	
+}
+.btn2:hover {
+	background-color: #B99b00;
+}
+/***********inputボタンレイアウト***************/
+input{
+	padding:5px 20px;
+	border-style: none;
+}
+
+/************スペースエリアのレイアウト***************/
+.space-area{
+	width:100%;
+	height:30px;
+}
+
+
+/************テーブルのレイアウト***************/
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: solid 1px #eee;
+}
+.table-title>th{
+	background-color: #827348;
+	color:#FFF
+}
+
+
+table th,table td{
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: solid 1px #B99b00;
+  min-width: 80px;
+  word-break: break-all;
+}
+
+table tr:nth-child(odd){
+  background-color: #eee
+  
+}
+/***********wd-300のレイアウト***************/
+.wd-300{
+	width:80px;
+	display:inline-block;
+}
+
+/***********right-content(menu/index)のレイアウト***************/
+  .right-content{
+	  display: flex;
+	   justify-content: flex-end;
+	   height:40px;
+	   margin: 0 10px 20px 0;
+}
+
+/***********seat_detail 合計金額の表示レイアウト***************/
+.total-price{
+	width:100%;
+	padding:20px 0px;
+}
+.total-price>h4{
+	text-align: right;
+}
+/***********ログイン画面の表示レイアウト***************/
+.login-box{
+	display: flex;
+	justify-content: center;
+	flex-wrap:wrap;
+}
+.err-message{
+	font-weight: 600;
+	color:red;
+}
+
+.login-box div{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	
+}
+.login-box input{
+	margin-left: 10px;
+	border:solid #3336 2px;
+}
+.login-box label{
+	padding:5px;
+}
+
+/***********会計終了ページのレイアウト***************/
+.check-btn{
+	display:flex;
+	justify-content: center;
+	flex-wrap:wrap;
+}
+
+.center{
+	text-align: center;
+}
+/***********メニューフォームのレイアウト***************/
+.menu-form{
+	padding:0px 100px;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.menu-form input, .menu-form textarea{
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border:solid #3336 2px;
+	width:400px;
+	padding: 5px 20px;
+}
+
+.menu-form  .btn2{
+	width:200px;
+	display:block;
+	margin:auto;
+	margin-top: 30px;
+}
+
+.menu-form  label{
+	display:block;
+	width:120px;
+}
+
+/***********メニュー登録_確認ページのレイアウト***************/
+.confirm-table{
+	background-color: #fff;
+}
+.confirm-table tr:nth-child(odd){
+	background-color: #fff;
+} 
+.confirm-table td{
+	text-align: left;
+	padding:10px;
+}
+
+.confirm-table .title{
+	width:20%;
+	background-color: #eee;
+	text-align: center;
+}
+
+.btn-box{
+	margin-top:20px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+.btn-box>form{
+	margin:0px 20px;
+}
+
+/***********inputのレイアウト***************/
+.input-box{
+	border:solid #3336 2px;
+}
+
+/***********center-contentsのレイアウト***************/
+.center-contents{
+	justify-content:center;
+}
+
+/***********historyページのレイアウト***************/
+.history-price{
+	font-weight: 700;
+	font-size:26px;
+	text-align:right;
+	margin:50px 20px 0px 0px;
+}
+
+.history-price>a{
+	background:linear-gradient(transparent 60%, #ff6 60%);
+}
+
+/***********headerのレイアウト***************/
+.header , .footer{
+  background-color: #827348;
+  
+}
+.header{
+  padding:10px 20px;
+  height:45px;
+}
+.header>p,.header>ul>li{
+  color:#fff;
+}
+.header span{
+  color:#fff;
+}
+.logo{
+  font-size: 36px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  float:left;
+}
+.header ul{
+  float:right;
+}
+.header ul li{
+  display: inline;
+}
+
+h2{
+  font-size: 1em;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px #c9bea2;
+  border-left: solid 15px #c9bea2;
+  font-family: "Sawarabi Mincho";
+}
+.wf-sawarabimincho { font-family: "Sawarabi Mincho"; }
+
+.english{
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 800;
+}
+
+h2>.english{
+  font-size:1.8em;
+}
+
+
+a:-webkit-any-link {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover{
+  color:#e7e7e7;
+}
+
+
+/***********全体のレイアウト***************/
+body{
+  margin: 0px;
+}
+
+*{
+  color:#333631;
+  line-height: 2rem;
+}
+
+@media screen and (min-width: 960px) {
+	.sp{
+		display:none;
+	}
+}
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+	.container {
+    width:100%; 
+    padding:10px;
+    }
+    
+    .pb-5 {
+    padding-bottom: 0rem!important;
+    }
+    
+  .backet-table{
+	 overflow-x: auto; /* tableタグのはみ出た要素を隠す */
+}
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+<section th:replace="~{block/header::header}"></section>
+<section class=contents>
+<div class=container>
+
+<h1><a th:text="*{seatId}"></a>番テーブル</h1>
+<h3>注文一覧</h3>
+<table>
+	<tr  class="table-title">
+		<th>商品名</th><th>金額</th><th>注文時間</th><th>ご提供</th>
+	</tr>
+	<tr th:each="ordersList : ${ordersList}">
+		<td th:text="${ordersList.menuName}"></td>
+		<td th:text="${ordersList.price}"></td>
+		<td th:text="*{#temporals.format(ordersList.orderTime, 'HH時mm分')}"></td>
+		<th:block th:if="${ordersList.deliveryFlg  == 0}">
+			<td>未</td>
+		</th:block>
+		<th:block th:if="${ordersList.deliveryFlg  == 1}">
+			<td>済</td>
+		</th:block>
+			</tr>
+</table>
+
+<div class="total-price">
+<h4>合計金額：<a th:text="*{totalPrice}"></a>円</h4>
+</div>
+
+<br>
+<h3>ステータス変更</h3>
+	<label>変更後のステータスを選択してください。</label>
+    <form method="POST"  th:action="@{/manage/seat_status/update}">
+ 	<select name="status">
+	<option value="1" th:selected="*{status == 1}">未使用</option>
+	<option value="2" th:selected="*{status == 2}">使用中</option>
+	<option value="3" th:selected="*{status == 3}">会計依頼中</option>
+	<option value="4" th:selected="*{status == 4}">要あとかたづけ</option>
+	</select>
+	<input  type="hidden" name="seatId" th:value="${seatId}">
+	<input type="submit" value="送信" onClick="check();" class="btn2">
+	</form>
+	
+<script>
+/* memo javascriptでエラーチェックする場合は、こちらを実装する */
+/* function check(){
+alert("Hello world!!");
+} */
+</script>
+</div>
+</section>
+</body>
+</html>
